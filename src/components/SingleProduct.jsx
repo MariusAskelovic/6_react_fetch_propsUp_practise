@@ -1,3 +1,5 @@
+import './singleProduct.scss'
+
 export default function SingleProduct(props) {
     const { id, title, description, price, rating, stock, brand, category, thumbnail } = props.item
     return (

@@ -1,11 +1,12 @@
 import { useEffect } from "react"
 import { useState } from "react"
 import SingleProduct from "./SingleProduct"
+import './productList.scss'
 
 
 const prodUrl = 'https://dummyjson.com/products'
 
-export default function ProductsList() {
+function ProductsList() {
     const [prodArr, setProdArr] = useState([])
 
     useEffect(() => {
@@ -27,3 +28,5 @@ export default function ProductsList() {
         </div>
     )
 }
+
+export default ProductsList
