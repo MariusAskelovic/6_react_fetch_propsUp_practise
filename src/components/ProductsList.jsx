@@ -20,6 +20,10 @@ export default function ProductsList() {
     // }
 
     return (
-        <div></div>
+        <div>
+            <ul>
+                {/* <singleProduct> */}
+            </ul>
+        </div>
     )
 }
