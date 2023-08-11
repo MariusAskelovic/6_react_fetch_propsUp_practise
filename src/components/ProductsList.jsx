@@ -19,8 +19,8 @@ function ProductsList() {
     }, [])
 
     return (
-        <div>
-            <ul>
+        <div className="container">
+            <ul className="cardsContainer">
                 {prodArr.map((pObj) => (
                     <SingleProduct key={pObj.id} item={pObj} />
                 ))}

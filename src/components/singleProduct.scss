@@ -1,0 +1,21 @@
+.productCard {
+  border: 1px solid #000;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+
+  .productText {
+    color: slategray;
+    padding: 20px;
+  }
+
+  .productBonusInfo {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+
+  .productLeftText {
+    display: flex;
+    flex-direction: column;
+  }
+}
