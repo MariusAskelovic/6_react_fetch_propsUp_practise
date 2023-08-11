@@ -1,7 +1,7 @@
 export default function SingleProduct(props) {
-    const [id, title, description, price, rating, stock, brand, category, thumbnail] = props
+    const { id, title, description, price, rating, stock, brand, category, thumbnail } = props.item
     return (
-        <div>
+        <li>
             <img src={thumbnail} alt="" />
             <h2>{title}</h2>
             <h4>{category}</h4>
@@ -15,6 +15,6 @@ export default function SingleProduct(props) {
                 <p>{id}</p>
                 <p>{brand}</p>
             </div>
-        </div>
+        </li>
     )
 }

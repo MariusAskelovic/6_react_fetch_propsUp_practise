@@ -1,5 +1,7 @@
 import { useEffect } from "react"
 import { useState } from "react"
+import SingleProduct from "./SingleProduct"
+
 
 const prodUrl = 'https://dummyjson.com/products'
 
@@ -15,14 +17,12 @@ export default function ProductsList() {
             .catch(console.warn)
     }, [])
 
-    // function handleProducts() {
-    //     const newArr = [...prodArr]
-    // }
-
     return (
         <div>
             <ul>
-                {/* <singleProduct> */}
+                {prodArr.map((pObj) => (
+                    <SingleProduct key={pObj.id} item={pObj} />
+                ))}
             </ul>
         </div>
     )
