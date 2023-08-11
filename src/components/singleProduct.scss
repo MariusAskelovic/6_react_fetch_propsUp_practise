@@ -3,19 +3,46 @@
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 
+  .productPhotoBlock {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .productPhoto {
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
+    min-width: 100%;
+  }
+
   .productText {
     color: slategray;
     padding: 20px;
+    overflow: hidden;
   }
 
+  .productCategory {
+    font-size: 14px;
+  }
   .productBonusInfo {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-end;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
 
   .productLeftText {
     display: flex;
     flex-direction: column;
   }
+  .productDescription {
+    transform: translateY(400px);
+    transition: 0.5s ease-in-out;
+  }
+}
+
+.productCard:hover .productDescription {
+  transform: translateY(0);
 }
