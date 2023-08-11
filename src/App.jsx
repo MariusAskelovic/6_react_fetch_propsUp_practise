@@ -1,7 +1,9 @@
+import ProductsList from "./components/ProductsList";
+
 export default function App() {
   return (
     <div>
-      <h1>new topic</h1>
+      <ProductsList />
     </div>
   )
 }
