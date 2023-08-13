@@ -6,21 +6,23 @@ export default function SingleProduct(props) {
         <li className='productCard'>
             <div className='productPhotoBlock'>
                 <img src={thumbnail} alt="{title}" className='productPhoto' />
+                <h3 className='productTitle'>{title}</h3>
+                <p className='productCategory'>{category}</p>
             </div>
             <div className='productText'>
-                <h3>{title} <span className='productCategory'>{category}</span></h3>
-                <p className='productDescription'>{description}</p> {/* show on hover */}
                 <div className='productBonusInfo'>
                     <div className='productLeftText'>
                         <p>{price}</p>
                         <p>{rating}</p>
                         <p>{stock}</p>
                     </div>
+                    <div><button className='hidden' onClick={props.onDelete}>Delete</button></div>
                     <div className='productRightText'>
-                        <p>{id}</p>
                         <p>{brand}</p>
+                        <p>{id}</p>
                     </div>
                 </div>
+                <p className='productDescription'>{description}</p> {/* show on hover */}
             </div>
         </li >
     )

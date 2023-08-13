@@ -3,7 +3,6 @@ import { useState } from "react"
 import SingleProduct from "./SingleProduct"
 import './productList.scss'
 
-
 const prodUrl = 'https://dummyjson.com/products'
 
 function ProductsList() {
@@ -18,11 +17,16 @@ function ProductsList() {
             .catch(console.warn)
     }, [])
 
+    function deleteProduct(idToDelete) {
+        const newArr = prodArr.filter(pObj => pObj.id !== idToDelete)
+        setProdArr(newArr);
+    }
+
     return (
         <div className="container">
             <ul className="cardsContainer">
                 {prodArr.map((pObj) => (
-                    <SingleProduct key={pObj.id} item={pObj} />
+                    <SingleProduct key={pObj.id} item={pObj} onDelete={() => deleteProduct(pObj.id)} />
                 ))}
             </ul>
         </div>
